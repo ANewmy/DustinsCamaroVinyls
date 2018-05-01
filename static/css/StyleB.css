@@ -1,0 +1,41 @@
+body {
+	background-image: url("/images/carbonFiber.jpg");
+}
+
+.navbar{
+	background-color: black;
+}
+
+.navbar ul li a{
+	margin-top: 10px;
+	color: white;
+}
+
+.navbar ul li a:hover{
+	background-color: white;
+	color: black;
+}
+
+.navbar .container-fluid .navbar button span {
+	background-color: white;
+}
+
+.navbar ul li a img {
+	margin-top: 0px;
+	height: 25px;
+	width: 25px;
+}
+
+.indexHeader{
+	background-image: url("/images/camaro.jpg");
+	background-size: cover;
+	padding-top: 250px;
+	padding-bottom: 250px;
+}
+
+.container {
+	margin-top: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #e3e8ee;
+}

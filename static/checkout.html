@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Check Out</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="./css/maxcdnstylesheet.css">
+		<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
+
+		<script type="text/javascript" src="./angJS/cart.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-app="cartApp" ng-controller="cartCtrl">
+			<h2>Check Out</h2>
+			<h2>{{msg}}</h2>
+			<form >
+				<div class="form-group">
+
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" ng-model="email" placeholder="Enter email">
+				</div>
+    
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember"> Remember me</label>
+				</div>
+    
+				<button type="submit" class="btn btn-default" ng-click="placeOrder()">Place Order</button>
+			</form>
+		</div>
+	</body>
+</html>
