@@ -32,18 +32,34 @@ app.use(session(sess));
 
 var MongoClient = require('mongodb').MongoClient;
 var db, menu;
-var dbURL = 'mongodb://admin:password123@localhost:27017/vinyldb';
+var args = process.argv.slice(2);
 
-MongoClient.connect(dbURL, function(err, database) {
-    if (err) throw err;
+if (args == 'dev') {
+    var dbURL = 'mongodb://admin:password123@localhost:27017/vinyldb';
+    MongoClient.connect(dbURL, function(err, database) {
+        if (err) throw err;
 
-    db = database.db('vinyldb');
+        db = database.db('vinyldb');
 
-    // Start the application after the database connection is ready
-    app.listen(8000);
-    console.log('Listening on port 8000');
-});
+        // Start the application after the database connection is ready
+        app.listen(8000);
+        console.log('Listening on port 8000');
+    });
+} else {
+    const PORT = process.env.PORT || 8000;
 
+    var dbURL = 'mongodb://admin:password123@ds049568.mlab.com:49568/heroku_hknt4735';
+
+    MongoClient.connect(dbURL, function(err, database) {
+        if (err) throw err;
+
+        db = database.db('heroku_hknt4735');
+
+        // Start the application after the database connection is ready
+        app.listen(PORT);
+        console.log('Listening on port 8000');
+    });
+}
 app.get('/register', function(req, res) {
     res.sendFile(`${publicPath}/register.html`);
 });
