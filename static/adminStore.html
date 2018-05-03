@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	</nav>
-			
+
 		<span ng-bind="numItems" class="badge"></span></a>
 	<div class="container">
 		<div class="content">
@@ -45,7 +45,7 @@
 			<div class="row text-right">
 				<div class="col-md-6"></div>
 				<input type="text" class="col-md-2" ng-model="description">
-				<button class="btn btn-primary col-md-1 col-md-push-1" type="button" ng-click="searchByDesc()">Search</button>		  
+				<button class="btn btn-primary col-md-1 col-md-push-1" type="button" ng-click="searchByDesc()">Search</button>
 			</div>
 			<div class="row text-center">
 				<p>{{msg}}</p>
@@ -53,7 +53,7 @@
 			<tr>
 				<th class="col-md-2">Vinyl Name</th>
 					<th class="col-md-2">Price</th>
-					<th class="col-md-2">Image Name</th>		
+					<th class="col-md-2">Image Name</th>
 			</tr>
 			<tr ng-repeat="item in menu track by $index">
 				<td class="col-md-2"><input type="text" ng-model="item.vinylName|uppercase"></td>
@@ -76,7 +76,12 @@
     	  			<input type="text" class="form-control" id="imgName" placeholder="imgName" name="imgName">
     			</div>
 			  	<button class="btn btn-primary">Add</button>
+
 			</form>
+			<br />
+
+			<button class="btn btn-primary"><a style="color:white;" href="./stores">Refresh</a></button>
+
 		  </div>
 </div>
 <script type="text/javascript">
