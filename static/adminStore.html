@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="./css/maxcdnstylesheet.css">
 <link rel="stylesheet" type="text/css" href="./css/StyleB.css">
 
-<script type="text/javascript" src="./angJS/store.js"></script>
+<script type="text/javascript" src="./angJS/menu.js"></script>
 </head>
 <body ng-app="menuApp" ng-controller="menuCtrl">
 	<nav class="navbar">
@@ -48,40 +48,35 @@
 	</nav>
 			
 		<span ng-bind="numItems" class="badge"></span></a>
-	<div class="container">
-		<div class="content">
+	<div class="content">
 		<table class="table table-hover">
-			<div class="row text-right">
-				<div class="col-md-6"></div>
+			<div class="row">
+				<div class="col-md-3">Search menu: </div>
 				<input type="text" class="col-md-2" ng-model="description">
 				<button class="btn btn-primary col-md-1 col-md-push-1" type="button" ng-click="searchByDesc()">Search</button>		  
 			</div>
-			<div class="row text-center">
-				<p>{{msg}}</p>
-			</div>
+			<div class=row></div>
+			<p>{{msg}}</p>
 			<tr>
 				<th class="col-md-2">Vinyl Name</th>
 					<th class="col-md-2">Price</th>
-					<th class="col-md-2">Image Name</th>		
+					<th class="col-md-2">Image Name</th>
+					<th class="col-md-2">Description</th>		
 			</tr>
 			<tr ng-repeat="item in menu track by $index">
 				<td class="col-md-2"><input type="text" ng-model="item.vinylName|uppercase"></td>
 				<td class="col-md-1"><input type="number" ng-model="item.price"></td>
 				<td class="col-md-2"><input type="text" ng-model="item.imgName"></td>
-				<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="updateStore(item)" >Update</button></td>
-				<td class="col-md-1"><button type="button" class="btn btn-danger" ng-click="removeItem(item)" >Remove</button></td>
+				<td class="col-md-2"><input type="text" ng-model="item.description"></td>
+				<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="updateMenu(item)" >Update</button></td>
 			</tr>
-			<tr action="/addItem" method="POST">
-				<td class="col-md-2"><input type="text" id="vinylName" placeholder="vinyl name" name="vinylName"></td>
-				<td class="col-md-1"><input type="number" id="price" placeholder="0.00" name="price"></td>
-				<td class="col-md-2"><input type="text" id="imgName" placeholder="image name (including the extension)" name="imgName"></td>
-				<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="addItem()" >Add</button></td>
+			<tr class="add">
+				<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="updateMenu(item)" >add</button></td>
 			</tr>
 		</table>
 
 		<hr>
 	</div>
-</div>
 <script type="text/javascript">
 </script>
 

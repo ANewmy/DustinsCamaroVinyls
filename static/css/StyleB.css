@@ -39,3 +39,7 @@ body {
 	padding-bottom: 30px;
 	background-color: #e3e8ee;
 }
+
+.container table tr{
+	background-color: white;
+}
