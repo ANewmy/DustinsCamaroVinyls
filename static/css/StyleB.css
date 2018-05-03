@@ -38,8 +38,13 @@ body {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background-color: #e3e8ee;
+} 
+
+.container .priceFix {
+	font-size: 20px;
 }
 
-.container table tr{
-	background-color: white;
+.container .img-thumbnail {
+	height: 300px;
+	width: 250px;
 }

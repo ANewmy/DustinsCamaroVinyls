@@ -7,9 +7,8 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="./angJS/cart.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="./css/maxcdnstylesheet.css">
 		<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
@@ -38,25 +37,14 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container" ng-app="cartApp" ng-controller="cartCtrl" ng-init="numItems"  ng-cloak>
-			<div class="content">
-				<div class="row rowbottom">
-					<div class="col-md-4 text-center" ng-repeat="item in vinyls">
-							<p>{{item.vinylName}}</p>
-						<img class="img-thumbnail" src="./images/{{item.imgName}}" alt="{{item.imgName}}">
-						<br>
-							<p class="priceFix">${{item.price}}</p>
-						<br>
-						<button type="button" class="btn btn-primary" ng-click="addToCart(item)" >Order</button>
-					</div>
-				</div>
-				<table>
-					<tr ng-repeat="item in cart track by $index">
-						<td><p>This item has been added to your cart</p></td>
-					</tr>
-				</table>
-				<hr>
-			</div>
+		<div class="indexHeader">
 		</div>
+		<div class="container text-center">
+			<h1>Welcome to Dustin's Camaro Vinyls</h1>
+
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		
+		</div>
+
 	</body>
 </html>

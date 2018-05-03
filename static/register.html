@@ -1,0 +1,30 @@
+<html lang="en-US">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="./css/login.css">
+		<link rel="stylesheet" type="text/css" href="./css/maxcdnstylesheet.css">
+		<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
+	</head>
+
+	<body>
+		<div class="login-page">
+		  <div class="form">
+			<form action="/register" method="POST">
+			  	<div class="form-group">
+    	  			<input type="email" class="form-control" id="email" placeholder="email" name="email">
+    			</div>
+    			<div class="form-group">
+    	  			<input type="password" class="form-control" id="pwd" placeholder="password" name="pwd">
+    			</div>
+    			<p>Password must be atleast 6 characters, contain a digit, and a letter</p>
+			  	<button>create</button>
+			  	<p class="message">Already registered? <a href="./index">Sign In</a></p>
+			  	<p class="message">Admin? <a href="./adminLogin">Sign In</a></p>
+			</form>
+		  </div>
+		</div>
+	</body>
+</html>

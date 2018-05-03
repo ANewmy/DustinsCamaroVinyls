@@ -5,22 +5,22 @@ app.controller('menuCtrl', function($scope,$http){
 	$http({
 	method: 'GET',
 	url: '/store',
+
 	//menu is to get the data from DB collection menu
 
 	}).then(function successCallback(response) {
 	$scope.menu=response.data
+	$scope.msg = "Store"
 
 	}, function errorCallback(response) {
 	$scope.menu= []
 	});
 
-	$scope.msg = "Store"
-
 
 //whenever the web page is loaded, it will pull the data from menu in DB server
 
 //second: update menu
-$scope.updateMenu=function(item){
+$scope.updateStore=function(item){
 		$http({
 	method: 'POST',
 	url: '/updateStore',
@@ -33,4 +33,33 @@ $scope.updateMenu=function(item){
 	$scope.msg="Server problem, try again later"
 	});
 }
+
+$scope.addItem=function(item){
+		$http({
+	method: 'POST',
+	url: '/addItem',
+	data: item
+
+	}).then(function successCallback(response) {
+	$scope.msg="Updated!"
+
+	}, function errorCallback(response) {
+	$scope.msg="Server problem, try again later"
+	});
+}
+
+$scope.removeItem = function(item){
+  $http({
+      method: 'POST',
+      url: '/removeItem',
+      data: item
+  }).then(function successCallback(response) {
+
+    $scope.msg="Removed!"
+
+}, function errorCallback(response) {
+    $scope.msg="Sorry, server problem, try again!"
+});
+} 
+
 }) //end of controller

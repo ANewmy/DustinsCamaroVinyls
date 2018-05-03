@@ -39,8 +39,26 @@ $scope.save = function(){
 });
 
 
+
+
+
   for (var i = 0, length = $scope.orders.length; i < length; i++) {
       $scope.editingData[i] = false;
   }
-}   
+}  
+
+$scope.deleteOrder = function(item){
+  $http({
+      method: 'POST',
+      url: '/deleteOrder',
+      data: item
+  }).then(function successCallback(response) {
+
+    $scope.msg="Deleted!"
+
+}, function errorCallback(response) {
+    $scope.msg="Sorry, server problem, try again!"
+});
+} 
+
 })

@@ -56,11 +56,11 @@ function findOrderItems(res,query)
   })
 }
 
-function deleteOrders(res,query)
+function deleteOrder(res,query)
 {
   var db=server.getDb()
 
-  db.collection("orders").remove(query,function(err, results) {
+  db.collection("orders").deleteOne(query,function(err, results) {
     if (err) throw err;
     console.log(results.result.n +" document deleted");
     
@@ -71,5 +71,5 @@ function deleteOrders(res,query)
 
 
 module.exports.insertOrders=insertOrders
-module.exports.deleteOrders=deleteOrders
+module.exports.deleteOrder=deleteOrder
 module.exports.findOrderItems=findOrderItems

@@ -2,37 +2,14 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/login.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		//<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="./css/maxcdnstylesheet.css">
 		<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
-		<script src="javascript/login.js"></script>
 	</head>
 
 	<body>
-		<nav class="navbar">
-			<div class="container-fluid">
-				<div class="navbar navbar-nav">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a class=" list-inline-item" href="./index.html">Home</a></li>
-						<li><a class=" list-inline-item" href="./store.html">Store</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html">Login/Register</a></li>
-						<li><a href="cart.html"><img class="cart" src="/images/cart.png" alt="cart"</a></li>
-						<span ng-bind="numItems" class="badge"></span></a>
-					</ul>
-				</div>
-			</div>
-		</nav>
 		<div class="login-page">
 			<div class="form">
 	  			<form action="/adminLogin" method="POST">
@@ -44,7 +21,7 @@
     				</div>
     				<button>login</button>
 				</form>
-				<p class="message">Regular User? <a href="login.html">Click here</a></p>
+				<p class="message">Regular User? <a href="./index">Click here</a></p>
 		  </div>
 		</div>
 	</body>
